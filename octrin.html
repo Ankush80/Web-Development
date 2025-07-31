@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Octrin</title>
+        <style>
+            body{
+                margin: 0;
+                
+            }
+            header{
+                background-color: #3d3b3b;
+                padding-bottom: 1%;
+                font-family: Times New Roman;
+            }
+            .logo{
+                text-align: right;
+                background-color: #3d3b3b;
+                color: white;
+                padding: 2%;
+                margin-bottom: -3%;
+            }
+            .menu-head{
+                margin-top: 0;
+                background-color: #8a8888;
+                text-align: center;
+                margin: 1%;
+                border-radius: 1vw;
+            }
+            .navigation{
+                display: none;
+            }
+            nav a{
+                display: block;
+                color: white;
+                text-decoration: none;
+                margin: 3%;
+                font-size: 16px;
+                text-align: center;
+            }
+            .menu:hover .navigation{
+                display: block;
+            }
+            nav a:hover{
+                background-color: grey;
+                padding: 1%;
+                font-weight: bold;
+                border-radius: 1vw;
+            }
+            main{
+              margin: 3%;
+            }
+            .video-head{
+              font-family: Times New Roman;
+              font-size: 30px;
+            }
+            .upper{
+              text-align: center;
+            }
+            .card-container{
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+            .card-container img{
+              width: 30%;
+              text-align: center;
+              border-radius: 5%;
+              box-shadow: 0 0 4px 4px #b0b0a7;
+              background-color: #e6e6e6;
+            }
+            .lang-logo{
+              margin: 5%;
+            }
+            .lang-logo .python{
+              width: 80%;
+            }
+            .lang-logo .css{
+              width: 24%;
+            }
+            .card-container img:hover{
+              transform: translateY(-5px);
+            }
+            .video-container{
+              align-content: center;
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+            }
+            .video-1{
+              width: 46%;
+              text-align: left;
+              box-shadow: 0 0 2px 2px lightgrey;
+              margin: 2%;
+              font-family: Courier;
+              border-top-left-radius: 1vw;
+              border-top-right-radius: 1vw;
+            }
+            .video-1 video{
+              width: 100%;
+              border-radius: 1vw;
+            }
+            .video-1:hover{
+              transform: translateY(-5px);
+            }
+            .video-btn-container{
+              text-align: center;
+              width: 100%;
+              margin-top: 4%;
+              margin-bottom: 5%;
+            }
+            .video-btn{
+              color: black;
+              background-color: aqua;
+              box-shadow: 0 0 3px 3px lightblue;
+              text-decoration: none;
+              padding: 1%;
+              font-weight: bold;
+              border-radius: 2vw;
+              font-size: 24px;
+              font-family: Times New Roman;
+              
+            }
+            .video-btn:hover{
+              background-color: black;
+              color: white;
+              box-shadow: 0 0 3px 3px lightgrey;
+            }
+            .content-card{
+              display: flex;
+              flex-wrap: wrap;
+              gap: 50px;
+              justify-content: center;
+            }
+            
+            .card1{
+              box-shadow: 0 0 3px 3px lightgrey;
+              border-radius: 5vw;
+              padding: 3%;
+              width: 90%;
+            }
+            .card1:hover{
+              transform: translateY(-5px);
+            }
+            .card1 h2{
+              font-family: Sans-Serif;
+            }
+            .card1 p{
+              font-size: 12px;
+              font-family: Times New Roman;
+            }
+            footer{
+              background-color: black;
+              color: white;
+              padding: 2%;
+              margin-top: 30%;
+            }
+            footer a{
+              color: lightblue;
+              text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo">OCTRIN</h1>
+            <div class="menu">
+                <h2 class="menu-head">☰ Menu</h2>
+                <nav class="navigation">
+                    <a href="#">Home</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Coding Exercises</a>
+                    <a href="#">Videos</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="upper">
+              <div class="card-container">
+                <div class="lang-logo">
+                  <a href="#">
+                    <img class="python" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"></a>
+                </div>
+                <div class="lang-logo">
+                  <a href="#"><img class="html" src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML"></a>
+                </div>
+                <div class="lang-logo">
+                  <a href="#"><img class="css" src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS"></a>
+                  </div>
+                  <div class="lang-logo">
+                    <a href="#"><img class="js" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Javascript"></a>
+                </div>
+              </div>
+            </section>
+            <section class="middle">
+              <h1 class="video-head">Videos:-</h2>
+              <div class="video-container">
+<div class="video-1">
+<video controls poster="1.png">
+  <source src="video.mp4" type="video/mp4">
+</video><p>Even or Odd? This Python Tool Tells You Instantly ⚡</p>
+</div>
+<div class="video-1">
+<video controls poster="3.png">
+  <source src="video.mp4" type="video/mp4">
+</video><p>This Chatbot Just Roasted Me in Python 😫🤖</p>
+</div>
+<div class="video-1">
+<video controls poster="4.png">
+  <source src="video.mp4" type="video/mp4">
+</video><p>My Favorite Game in Python – Can You Guess the Number? 🎯</p>
+</div>
+<div class="video-1">
+<video controls poster="2.png">
+  <source src="video.mp4" type="video/mp4">
+</video><p>This HTML & CSS Webpage Looks Insane! 💻🔥 | Web Dev Mini Project</p>
+</div>
+<div class="video-btn-container">
+  <a class="video-btn" href="#">More Videos</a>
+</div>
+              </div>
+              
+              <h1 class="card-head">Infortainment:-</h1>
+              <div class="content-card">
+              <div class="card1">
+                <h2 class="web-dev">Web Development</h2>
+                <p>Build and maintain modern websites using HTML, CSS, and JavaScript. From responsive design to interactive features, web development brings ideas to life on the internet.</p>
+              </div>
+              <div class="card1">
+                <h2 class="app-dev">App Development</h2>
+                <p>Design and create mobile or desktop applications that solve real-world problems. App development combines user-friendly interfaces with powerful functionality using modern tools and frameworks.</p>
+              </div>
+              <div class="card1">
+                <h2 class="ai">Artificial Intelligence</h2>
+                <p>AI enables machines to mimic human intelligence — from learning and reasoning to problem-solving. It powers smart applications like chatbots, recommendation systems, and self-driving cars, shaping the future of technology.</p>
+              </div>
+              </div>
+            </section>
+        </main>
+        <footer>
+          <p>© 2025 <strong>Octrin</strong>. All rights reserved.</p>
+          <p>Made with ❤️ using <a href="#">HTML</a>, <a href="#">CSS</a> & <a href="#">Python</a></p>
+          <p>
+            Connect: 
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
+            <a href="https://youtube.com/@Octrin" target="_blank">YouTube</a> | 
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+          </p>
+        </footer>
+    </body>
+</html>
