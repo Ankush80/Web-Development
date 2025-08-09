@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vote Online</title>
+    <style>
+    body {
+      background-color: white;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+      font-family: Sans-Serif;
+    }
+    #inp {
+      font-size: 16px;
+    }
+    #check {
+      font-size: 16px;
+      font-family: Sans-Serif;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border-color: black;
+      border-radius: 1vw;
+      border-style: solid;
+    }
+    #check:hover {
+      background-color: white;
+      color: black;
+    }
+    main {
+      display: none;
+    }
+    #vote {
+      box-shadow: 0 0 2px 2px grey;
+      background-color: lightgrey;
+      border-radius: 2vw;
+      text-align: left;
+      margin: 5%;
+      padding: 3%;
+      font-family: courier;
+      font-weight: bold;
+    }
+    </style>
+    
+    <script>
+      function check() {
+        let input = document.getElementById("inp").value.trim();
+        let a = parseInt(input);
+        if (isNaN(a)) {
+          alert("You didn't enter your age.");
+        }
+        else if (a < 18) {
+          alert("You are not eligible to vote.");
+          document.body.style.display = "none";
+        }
+        else if (a >= 18) {
+          document.body.style.display = "block";
+          document.querySelector("main").style.display = "block";
+        }
+        else {
+          alert("You entered invalid age.")
+          document.body.style.display = "none";
+        }
+      }
+      let modi = 0;
+      let putin = 0;
+      let musk = 0;
+      let octrin = 0;
+      function vote() {
+        let v = document.getElementById("voting").value.trim();
+        let mssg1 = "";
+        if (isNaN(v)) {
+          mssg1 = "You didn't vote to anyone.";
+        }
+        else if (v == 1) {
+          mssg1 = "Congratulations! You have voted for Narendra Damodardas Modi";
+          modi++;
+        }
+        else if (v == 2) {
+          mssg1 = "Congratulations! You have voted for Vladimir Putin";
+          putin++;
+        }
+        else if (v == 3) {
+          mssg1 = "Congratulations! You have voted for Elon Musk";
+          musk++;
+        }
+        else if (v == 4) {
+          mssg1 = "Congratulations! You have voted for Octrin";
+          octrin++;
+        }
+        else {
+          mssg1 = "Kindly enter a valid integer.";
+        }
+        document.getElementById("output").innerHTML = mssg1;
+        document.getElementById("count").innerHTML = "Narendra Damodardas Modi: "+modi+" Votes<br>" +"Vladimir Putin: "+putin+" Votes<br>"+ "Elon Musk: "+musk+" Votes<br>" + "Octrin: "+octrin+" Votes";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Elections</h1>
+    <input id="inp" placeholder="write...", type="text">
+    <button id="check" onclick="check()">Check Eligibility</button>
+    <main>
+      <section id="vote">
+        <p>Narendra Modi: 1</p>
+        <p>Vladimir Putin: 2</p>
+        <p>Elon Musk: 3</p>
+        <p>Octrin: 4</p>
+        <input id="voting" type="text" placeholder="Vote now in integer">
+        <button onclick="vote()">Vote Now</button>
+        <p id="output"></p>
+      <p id="count"></p>
+      </section>
+    </main>
+  </body>
+</html>
